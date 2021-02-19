@@ -11,14 +11,10 @@ public class InjectSetup {
     public class func setup() {
         
         // MARK: - Presentation
-        _ = InjectManager.register(serviceType: TemplatePresenter.self) {
-            _ in TemplatePresenter<TemplateViewController>()
+        _ = InjectManager.register(serviceType: CharacterPresenter.self) {
+            _ in CharacterPresenter<CharacterViewController>()
         }
         
-        //Root View controller
-//        _ = InjectManager.register(serviceType: MVPViewController.self, name: "RootViewController") {
-//            _ in HomeViewController(nibName: "HomeViewController", bundle: nil)
-//        }
         
     }
 }

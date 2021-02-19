@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseNavigator {
+public class BaseNavigator {
     
     var sourceUI : BaseUI?
     
