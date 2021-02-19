@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="HeroesMVP" customModuleProvider="target">
+            <connections>
+                <outlet property="lbLoading" destination="TXm-Go-LTK" id="GtM-4I-DLy"/>
+                <outlet property="skView" destination="XGV-R1-jyp" id="g3f-Jq-q0X"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="mE7-0u-Qk9">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <skView contentMode="scaleToFill" allowsTransparency="YES" ignoresSiblingOrder="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XGV-R1-jyp">
+                    <rect key="frame" x="0.0" y="435.5" width="414" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="wxh-XN-d5c"/>
+                    </constraints>
+                </skView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXm-Go-LTK">
+                    <rect key="frame" x="134.5" y="372.5" width="145" height="43"/>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="36"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="3a6-oI-fvW"/>
+            <constraints>
+                <constraint firstItem="XGV-R1-jyp" firstAttribute="leading" secondItem="3a6-oI-fvW" secondAttribute="leading" id="GHM-RG-wJl"/>
+                <constraint firstItem="XGV-R1-jyp" firstAttribute="top" secondItem="TXm-Go-LTK" secondAttribute="bottom" constant="20" id="YQi-95-er2"/>
+                <constraint firstItem="XGV-R1-jyp" firstAttribute="centerX" secondItem="mE7-0u-Qk9" secondAttribute="centerX" id="Z0W-L4-ZN7"/>
+                <constraint firstItem="XGV-R1-jyp" firstAttribute="centerY" secondItem="mE7-0u-Qk9" secondAttribute="centerY" id="aPs-cf-eIU"/>
+                <constraint firstItem="TXm-Go-LTK" firstAttribute="centerX" secondItem="mE7-0u-Qk9" secondAttribute="centerX" id="nLQ-yk-M7n"/>
+                <constraint firstItem="3a6-oI-fvW" firstAttribute="trailing" secondItem="XGV-R1-jyp" secondAttribute="trailing" id="zdc-ee-c3G"/>
+            </constraints>
+            <point key="canvasLocation" x="-1558" y="-70"/>
+        </view>
+    </objects>
+</document>
