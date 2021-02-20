@@ -9,3 +9,6 @@
 //Base
 "loading_text" = "Loading";
 "searching_text" = "Searching";
+"generic_error" = "Error";
+"generic_accept" = "Ok";
+"generic_error_description" = "An error has ocurred, please try again later.";

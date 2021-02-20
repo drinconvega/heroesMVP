@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 
 public class CharacterListNavigator: BaseNavigator {
-    /*
+    
     func goToCharacter(character: Character) {
         navigate(segueIdentifier: "characterSegue") {
-            guard let loginViewController = $0 as? CharacterViewController else {
+            guard let characterVC = $0 as? CharacterViewController else {
                 return
             }
-            loginViewController.character = character
+            characterVC.character = character
         }
-    }*/
+    }
     
 }

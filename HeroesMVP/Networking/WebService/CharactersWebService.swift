@@ -11,10 +11,14 @@ import JSONDecoder_Keypath
 
 public class CharactersWebService: BaseWebService {
     
-    public func getCharacters(onSuccess: @escaping ([Character]) -> Void,
+    public func getCharacters(page: Page, onSuccess: @escaping ([Character]) -> Void,
                               onError: @escaping (Error) -> Void) {
         if BaseWebService.isConnected(){
-            BaseWebService.manager.request(Bundle.main.object(forInfoDictionaryKey: "PRIV_KEY") as! String, method: .get, parameters: BaseWebService.getSecurityParams()).validate()
+            var params = BaseWebService.getSecurityParams()
+            params["limit"] = String(page.limit)
+            params["offset"] = String(page.offset)
+            
+            BaseWebService.manager.request("\(Bundle.main.object(forInfoDictionaryKey: "SERVER_URL") as! String)characters", method: .get, parameters: params).validate()
                 .responseJSON (completionHandler: { response in
                     switch response.result {
                     case .success:

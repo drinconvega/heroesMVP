@@ -9,5 +9,5 @@ import Foundation
 
 protocol CharacterListUI: BaseUI {
     
-    
+    func reloadData()
 }

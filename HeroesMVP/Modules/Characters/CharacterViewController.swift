@@ -11,6 +11,8 @@ public class CharacterViewController: BaseViewController {
     
     private let presenter: CharacterPresenter = InjectManager.resolve(serviceType: CharacterPresenter<CharacterViewController>.self)!
     
+    public var character : Character?
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
     }

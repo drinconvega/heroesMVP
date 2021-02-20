@@ -18,4 +18,8 @@ public extension String {
         }.joined()
     }
     
+    var localized: String {
+        return NSLocalizedString(self, comment: self)
+    }
+    
 }

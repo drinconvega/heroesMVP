@@ -15,6 +15,18 @@ public class InjectSetup {
             _ in CharacterPresenter<CharacterViewController>()
         }
         
+        _ = InjectManager.register(serviceType: CharacterListPresenter.self) {
+            _ in CharacterListPresenter<CharacterListViewController>()
+        }
+        
+        // MARK: - Navigators
+        _ = InjectManager.register(serviceType: CharacterListNavigator.self) {
+            _ in CharacterListNavigator()
+        }
+        
+        _ = InjectManager.register(serviceType: CharacterNavigator.self) {
+            _ in CharacterNavigator()
+        }
         
     }
 }
