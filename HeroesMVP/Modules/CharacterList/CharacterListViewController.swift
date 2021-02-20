@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AlamofireImage
 import UIKit
 
 public class CharacterListViewController: BaseViewController {
@@ -61,7 +62,13 @@ extension CharacterListViewController: UITableViewDataSource, UITableViewDelegat
         let character = self.presenter.characterAt(index: indexPath.row)
         
         cell.titleLabel.text = character?.name
-        //cell.leftImageView = character.i
+        
+        cell.leftImageView.af_setImage(withURL: URL(string: character?.thumbnailUrl ?? "")!, placeholderImage: UIImage(named: "character_default"), completion:  { (response) in
+            if let image = response.value {
+                self.presenter.setImgData(image: image, toCharacter: indexPath.row)
+            }
+            
+        })
         
         return cell
         

@@ -85,6 +85,11 @@
                             <constraint firstAttribute="trailing" secondItem="nKB-KG-VhI" secondAttribute="trailing" constant="20" id="qc7-el-Gc6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="W8P-Hp-V5d" id="TPu-zB-v9g"/>
+                        <outlet property="imageView" destination="OA2-fC-pZR" id="pKE-t5-gKM"/>
+                        <outlet property="nameLabel" destination="nKB-KG-VhI" id="Vga-Jd-bf1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYZ-OB-ve5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

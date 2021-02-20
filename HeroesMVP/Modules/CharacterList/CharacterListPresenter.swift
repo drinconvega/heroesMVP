@@ -43,6 +43,10 @@ class CharacterListPresenter<V : CharacterListUI> : BaseViewControllerPresenter<
     }
     
     // MARK: View
+    public func setImgData(image: UIImage, toCharacter index: Int) {
+        self.characters?[index].imgData = image.pngData()
+    }
+    
     public func updateCharacters(updatePage: Bool = false) {
         if updatePage {
             self.page.offset+=defaultLimit

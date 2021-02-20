@@ -12,6 +12,7 @@ public struct Character {
     var name: String
     let description: String
     var thumbnailUrl: String
+    var imgData: Data?
 
     private enum CodingKeys: String, CodingKey {
         case characterId = "id"

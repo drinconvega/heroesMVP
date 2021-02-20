@@ -10,6 +10,7 @@ import UIKit
 public class BaseViewController : MVPViewController, UIPopoverPresentationControllerDelegate {
     
     private var segueIdentifier : String?
+    private var dataDelegate : ((UIViewController) -> ())?
     private var navController : UINavigationController?
     
     public override func viewDidLoad() {
@@ -39,6 +40,13 @@ public class BaseViewController : MVPViewController, UIPopoverPresentationContro
     
     func shouldHideNavigationBar() -> Bool {
         return false
+    }
+    
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dataDelegate = self.dataDelegate,
+            segueIdentifier == segue.identifier {
+            dataDelegate(segue.destination)
+        }
     }
     
     // Moved from BaseUI extension to allow overrides
@@ -94,6 +102,7 @@ extension BaseViewController : BaseUI {
     
     public func navigate(segueIdentifier : String, dataDelegate : ((UIViewController) -> ())?) {
         self.segueIdentifier = segueIdentifier
+        self.dataDelegate = dataDelegate
         performSegue(withIdentifier: segueIdentifier, sender: nil)
     }
     
